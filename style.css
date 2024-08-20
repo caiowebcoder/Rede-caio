@@ -1,0 +1,169 @@
+.menu {margin: 0; padding: 0;}
+
+body {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+    background-color: #1c1c1c;
+}
+
+.menu {
+    list-style:none;
+    border:1px solid #c1c1c1;
+    float:left;
+    margin: auto;
+    justify-content: center;
+}
+
+.menu li {
+    position: relative;
+    float: left;
+    border-right: 1px solid #ffffff;
+}
+
+.menu li a{color:#ffffff; text-decoration:none; padding:5px 10px; display:block;}
+
+.menu li a:hover {
+    background:#333;
+    color:#fff;
+    box-shadow: inset;
+    -moz-box-shadow: 0 3px 10px 0 #CCC;
+    -webkit-box-shadow: 0 3px 10px 0 #ccc;
+    text-shadow: 0px 0px 5px #fff;
+}
+
+.menu li  ul{
+    position:absolute;
+    top:25px;
+    left:0;
+    background-color:#252525;
+    display:none;
+    padding-left: 0;
+}
+
+.menu li:hover ul, .menu li.over ul{display:block;}
+
+.menu li ul li{
+    border:1px solid #c0c0c0;
+    display:block;
+    width:150px;
+}
+
+h1 {
+    background-color: rgba(30, 30, 30, 0.678);
+    color: rgb(0, 255, 21);
+    
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    
+}
+
+h2 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+li {
+    color: white;
+} 
+
+.fotodeperfil {
+    width: 160px;
+    text-align: left;
+    display: block;
+    
+}
+
+/* * {
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:12px;
+}
+
+body {
+    background-color: #121212;
+}
+
+
+
+
+.proj01 {
+    border: none;
+    background-color: #121212;
+    padding: 0;
+    
+}
+
+li {
+    color: white;
+}
+
+
+.menu11 {
+    list-style: none; 
+    margin: 10px;
+    display: inline;
+    color: white;
+}
+
+li a {
+    padding: 5px 10px; 
+    margin:0;
+    border: 0px solid #f00; 
+    background: #903;
+    text-decoration: none;
+    color:#FFF;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+
+}
+
+
+.menu11 a:hover {
+    background-color: #a53e3e;
+    color: #000; 
+    border-color: #000;
+}
+
+h1 {
+    background-color: rgba(30, 30, 30, 0.678);
+    color: white;
+    
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    
+}
+
+h2 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+/*li a:hover {
+    background: #a53e3e;
+    color: #000; 
+    border-color: #000;
+}*/
