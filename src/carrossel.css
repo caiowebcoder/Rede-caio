@@ -6,12 +6,6 @@ body {
     background-color: #f5f5f5;
 }
 
-/* Estilo para o texto acima do carrossel */
-h1, p {
-    text-align: center;
-    padding: 10px;
-}
-
 /* Contêiner do carrossel */
 .carousel-container {
     display: flex;
