@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Imagens</title>
+    <link rel="stylesheet" href="carrossel.css">
+</head>
+<body>
+
+<h1>Texto Explicativo</h1>
+<p>Este é um parágrafo de texto que estará acima do carrossel de imagens.</p>
+
+<div class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="sua-imagem1.jpg" alt="Imagem 1">
+                <p>Imagem 1</p>
+            </div>
+            <div class="carousel-item">
+                <img src="sua-imagem2.jpg" alt="Imagem 2">
+                <p>Imagem 2</p>
+            </div>
+            <div class="carousel-item">
+                <img src="sua-imagem3.jpg" alt="Imagem 3">
+                <p>Imagem 3</p>
+            </div>
+            <!-- Adicione mais itens do carrossel conforme necessário -->
+        </div>
+        <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+</div>
+
+<script src="carrossel.js"></script>
+</body>
+</html>
