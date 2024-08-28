@@ -1,11 +1,9 @@
 let currentSlide = 0;
+let slideInterval;
 
 function showSlide(index) {
     const slides = document.querySelectorAll('.carousel-item');
     const totalSlides = slides.length;
-
-    console.log("Current Slide:", currentSlide); // Log do slide atual
-    console.log("Index Requested:", index); // Log do índice solicitado
 
     // Ajusta o índice do slide para ser cíclico
     if (index >= totalSlides) {
@@ -16,8 +14,6 @@ function showSlide(index) {
         currentSlide = index;
     }
 
-    console.log("Slide After Adjustment:", currentSlide); // Log do slide após ajuste
-
     // Muda a posição do contêiner interno
     const carouselInner = document.querySelector('.carousel-inner');
     carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
@@ -27,7 +23,20 @@ function moveSlide(direction) {
     showSlide(currentSlide + direction);
 }
 
-// Inicializa o carrossel na primeira imagem
+// Função para iniciar o timer
+function startSlideTimer() {
+    slideInterval = setInterval(() => {
+        moveSlide(1);
+    }, 4000); // 4 segundos
+}
+
+// Função para parar o timer (opcional, caso queira adicionar esta funcionalidade)
+function stopSlideTimer() {
+    clearInterval(slideInterval);
+}
+
+// Inicializa o carrossel na primeira imagem e inicia o timer
 document.addEventListener('DOMContentLoaded', function () {
     showSlide(currentSlide);
+    startSlideTimer();
 });
