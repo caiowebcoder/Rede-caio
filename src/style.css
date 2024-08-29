@@ -4,6 +4,8 @@ body {
     font-family: arial, helvetica, sans-serif;
     font-size: 12px;
     background-color: #1c1c1c;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .menu {
