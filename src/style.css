@@ -3,7 +3,7 @@
 body {
     font-family: arial, helvetica, sans-serif;
     font-size: 12px;
-    background-color: #1c1c1c;
+    background-color:#121212;
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -20,7 +20,6 @@ body {
     position: relative;
     float: left;
     border-right: 1px solid #ffffff;
-    
 }
 
 .menu li a{color:#ffffff; text-decoration:none; padding:5px 10px; display:block;}
