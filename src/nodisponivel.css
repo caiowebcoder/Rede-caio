@@ -1,0 +1,8 @@
+footer {
+    background-color: rgb(82, 82, 82);
+    margin: 50 0 30 0;
+    padding-bottom: 30px;
+}
+footer p {
+    padding-left: 10%;
+}
