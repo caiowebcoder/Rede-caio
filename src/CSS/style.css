@@ -20,52 +20,104 @@ header {
     overflow: hidden;
 }
 
+header {
+    height: auto;
+    min-height: 0;
+}
+  
+  
+
 /* Estilo para a imagem */
-.imginicio {
+.imginicio, .imagemsobre {
     width: 100%;
     height: 100vh; /* Ocupa toda a altura da tela */
     object-fit: cover;
     object-position: right center;
 }
 
+
+
+/* Estilo para o contêiner principal */
+.container-comigo3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-image: url('../img/comigo3.jpg'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+    min-height: 100vh; /* Mantém a altura mínima de 100% da tela */
+}
+
+/* Estilo para o título */
+.container-comigo3 h2 {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 35%; /* Espaçamento abaixo do título */
+    
+}
+
+/* Container para gráfico e parágrafo */
+.container-grafico-paragrafo {
+    display: flex;
+    /*justify-content: space-between; Garante que o gráfico fique à esquerda e o parágrafo à direita */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limita a largura máxima do container */
+}
+
+/* Estilo para o gráfico */
+.container-comigo3 .graficoskill {
+    width: 30%; /* O gráfico ocupa 45% da largura do container */
+    z-index: 2;
+    margin-left: 6%;
+}
+
+/* Estilo para o parágrafo */
+.container-comigo3 p {
+    width:100%; /* O parágrafo ocupa 45% da largura do container */
+    font-size: 1rem;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 2;
+    margin-right: 6%;
+}
+
 /* Estilo para o main */
 main {
-    position: relative; /* Permite que os elementos filhos usem posicionamento absoluto */
+    position: relative;
     width: 100%;
-    height: 100vh; /* 100% da altura visível da tela */
+    height: 100vh;
 }
-
-/* Estilo para a imagem de fundo */
-.imagemsobre {
-    width: 100%;
-    height: auto; /* Ajusta a altura automaticamente */
-    max-height: 100vh; /* Garante que não passe da altura da tela */
-    object-fit: cover; /* Mantém a proporção da imagem e cobre o contêiner */
-}
-
 
 /* Estilo para a div "sobre" */
 .sobre {
-    position: absolute; /* Permite que a div seja posicionada sobre a imagem */
+    position: absolute;
     top: 50%; /* Centraliza verticalmente */
     left: 40%; /* Centraliza horizontalmente */
-    transform: translate(-60%, -50%); /* Ajusta a posição para que fique centralizado */
+    transform: translate(-60%, -50%); /* Ajusta a posição para ficar centralizado */
     z-index: 2; /* Garante que a div fique acima da imagem */
-    color: white; /* Define a cor do texto como branco */
-    text-align: center; /* Centraliza o texto */
-    background-color: rgba(0, 0, 0, 0.111); /* Fundo transparente para melhor a legibilidade */
-    padding: 20px; /* Espaçamento interno */
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.111); /* Fundo transparente */
+    padding: 20px;
 }
 
 /* Ajustes no título e parágrafo */
 .sobre h2 {
-    font-size: 1.5rem; /* Tamanho do título */
-    margin-bottom: 1rem; /* Espaço abaixo do título */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .sobre p {
-    font-size: 1rem; /* Tamanho do parágrafo */
-    line-height: 1.5; /* Espaçamento entre linhas */
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 /* Estilo para o menu */
@@ -73,35 +125,35 @@ main {
     position: absolute;
     top: 20px;
     left: 20px;
-    z-index: 2; /* Camada superior para o menu */
+    z-index: 2;
 }
 
 ul {
     list-style: none;
     display: flex;
-    gap: 1rem; /* Espaçamento entre os itens ajustável */
+    gap: 1rem;
 }
 
 li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem; /* Tamanho da fonte ajustável */
-    padding: 0.5rem 1rem; /* Espaçamento interno ajustável */
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto semi-transparente */
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo no hover */
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Estilo para o título e parágrafo */
+/* Estilo para o título e parágrafo inicial */
 .Tituloinicial {
     position: absolute;
     top: 40%;
     left: 5%;
-    z-index: 3; /* Camada superior para o texto */
+    z-index: 3;
     color: white;
     text-align: left;
 }
@@ -139,22 +191,22 @@ button:hover {
     color: black;
 }
 
-.imginicio, .imagemsobre {
-    width: 100%;
-    min-height: 100vh;
-    height: auto; /* Permite que a imagem se ajuste sem quebrar */
-    object-fit: cover;
+.container-comigo3 {
+    padding: 0;
 }
-
-html {
-    scroll-behavior: smooth; /* Habilita a rolagem suave */
-}
+  
+.container {
+    height: 100vh; /* 100% da altura da tela */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  }
 
 
 
 
 /* Estilo responsivo para diferentes tamanhos de tela */
-@media (max-width: 768px) { /* Tamanho da tela de tablets e celulares */
+@media (max-width: 768px) { 
     .Caixainicial ul {
         padding-left: 15%;
     }
@@ -176,67 +228,90 @@ html {
         padding-right: 15%;
         top: 40%;
     }
-    .imginicio {
-        height: 70vh; /* Ajuste de altura */
-        object-position: right center; /* Centraliza a imagem em telas menores */
-        object-position: 60% center; /* Move a imagem 30% para a direita */
+
+    .imginicio, .imagemsobre {
+        height: 100vh;
+        object-position: 60% center;
     }
-    .imagemsobre {
-        height: 70vh; /* Ajuste de altura */
-        object-position: right center; /* Centraliza a imagem em telas menores */
-        object-position: 55% center; /* Move a imagem 30% para a direita */
-    }
-    /* Ajustes no título e parágrafo */
+
     .sobre {
-        position: absolute; /* Serve para que a div seja posicionada sobre a imagem */
-        top: 50%; /* Centraliza verticalmente */
-        left: 50%; /* Centraliza horizontalmente */
-        transform: translate(-50%, -50%); /* Ajusta a posição para que fique centralizado */
-        z-index: 2; /* Garante que a div fique acima da imagem */
-        color: white; /* Define a cor do texto como branco */
-        text-align: center; /* Centraliza o texto */
-        background-color: rgba(0, 0, 0, 0.419); /* Fundo transparente para melhor a legibilidade */
-        padding: 0px; /* Espaçamento interno */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.419);
+        padding: 0px;
         width: 80%;
     }
-    .sobre h2 {
-    font-size: 1.5rem; /* Tamanho do título */
-    margin-bottom: 1rem; /* Espaço abaixo do título */
-    color: white;
-}
-.sobre p {
-    font-size: 1.0rem; /* Tamanho do parágrafo */
+
+    .container-comigo3 {
+        flex-direction: column;
+    }
+
+    .container-grafico-paragrafo {
+        flex-direction: column; /* Muda para colunas em telas pequenas */
+    }
+
+    .container-comigo3 .graficoskill, 
+    .container-comigo3 p {
+        width: 100%; /* Gráfico e parágrafo ocupam 100% da largura da tela */
+        margin-bottom: 20px; /* Adiciona espaçamento entre os elementos */
+    }
+
+    .container-comigo3 h2 {
+        font-size: 1.5rem;
+        margin-top: 8%;
+        margin-bottom: 5%;
+    }
+
+    .container-comigo3 .graficoskill {
+        width: 77%;
+    }
+/*Alguém realmente está lendo isso?*/
+    .container-comigo3 p {
+        font-size: 1rem; 
+        background-color: rgba(0, 0, 0, 0.574);
+        width: 90%;
+        margin-left: 5%;
+    }
+/*Ordem do conteúdo Habilidades*/
+    .container {
+        flex-direction: column; /* Mudando a ordem */
+    }
+
+    .container-comigo3 H2 {
+        order: 1; /* H2 acima */
+    }
+
+    .container-comigo3 P {
+        order: 2; /* P abaixo do H2 */
+    }
+
+    .container-comigo3 .graficoskill {
+        order: 3; /* Gráfico abaixo */
+    }
 
 }
-}
 
-@media (max-width: 344px) { /* Ajuste para Z Fold 5 */
+@media (max-width: 344px) { /* Ajuste para telas menores, como Z Fold 5 */
     .Caixainicial {
         display: flex;
-        justify-content: center; /* Centraliza o menu horizontalmente */
-        width: 100%; /* Garante que o menu ocupe toda a largura da tela */
+        justify-content: center;
+        width: 100%;
     }
 
     .Caixainicial ul {
-        display: flex;
-        justify-content: center; /* Centraliza os itens da lista */
-        padding-left: 0; /* Remove o padding à esquerda */
-        gap: 1rem; /* Espaçamento ajustado entre os itens */
+        justify-content: center;
+        padding-left: 0;
+        gap: 1rem;
     }
-    .imginicio {
-        height: 70vh; /* Ajuste de altura */
-        object-position: right center; /* Centraliza a imagem em telas menores */
-        object-position: 60% center; /* Move a imagem 30% para a direita */
-    }
-    .imagemsobre {
-        height: 70vh; /* Ajuste de altura */
-        object-position: right center; /* Centraliza a imagem em telas menores */
-        object-position: 55% center; /* Move a imagem 30% para a direita */
+
+    .imginicio, .imagemsobre {
+        height: 70vh;
+        object-position: 60% center;
     }
 }
 
-
-@media (min-width: 1024px) { /* Para telas grandes (desktops) */
+@media (min-width: 1024px) { 
     .Tituloinicial h1 {
         font-size: 2.5rem;
     }
@@ -246,22 +321,16 @@ html {
     }
 
     button {
-        font-size: 1.0rem;
+        font-size: 1rem;
         padding: 1rem 1.5rem;
     }
-    .Tituloinicial {
-        padding-left: 6%;
-    }
+
     .sobre {
-        position: absolute; /* Serve para que a div seja posicionada sobre a imagem */
-        top: 50%; /* Centraliza verticalmente */
-        left: 35%; /* Centraliza horizontalmente na esquerda */
-        transform: translate(-50%, -50%); /* Ajusta a posição para que fique centralizado */
-        z-index: 2; /* Garante que a div fique acima da imagem */
-        color: white; /* Define a cor do texto como branco */
-        text-align: center; /* Centraliza o texto */
-        background-color: rgba(0, 0, 0, 0.419); /* Fundo transparente para melhor a legibilidade */
-        padding: 0px; /* Espaçamento interno */
+        top: 50%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.419);
+        padding: 0px;
         width: 40%;
     }
 }
