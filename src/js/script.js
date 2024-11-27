@@ -1,5 +1,3 @@
-const diaprodutivo = 1
-let livros = true
-let muaythai = false
+const nota = (3 + 5);
 
-console.log('livros, muaythai = diaprodutivo')
+console.log(nota * 2);

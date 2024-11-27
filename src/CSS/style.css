@@ -5,23 +5,26 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(0, 0, 0);
-    margin: 0;
+    background-color: black;
+    margin: 0 auto;
     padding: 0;
+    min-height: 100dvh;
 }
 
 /* Estilo para o header */
 header {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     /* 100% da altura visível da tela */
     overflow: hidden;
-}
-
-header {
     height: auto;
     min-height: 0;
 }
@@ -32,7 +35,7 @@ header {
 .imginicio,
 .imagemsobre {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     /* Ocupa toda a altura da tela */
     object-fit: cover;
     object-position: right center;
@@ -53,7 +56,7 @@ header {
     background-position: center;
     padding: 20px;
     color: white;
-    min-height: 100vh;
+    min-height: 100dvh;
     /* Mantém a altura mínima de 100% da tela */
 }
 
@@ -107,12 +110,18 @@ header {
     scroll-behavior: smooth;
 }
 
+#rolagemsobre, #rolagemcontato {
+    height: 1px; 
+}
+
+
 .container-contato {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     top: 100%;
     z-index: -1;
+    overflow: hidden; /*tirar aquele espaço preto de baixo*/
 }
 
 .redes-sociais {
@@ -128,7 +137,7 @@ header {
 /*retire o hoverflow hidem e coloque um top de x px para a div redes sociais*/
 .imgcontato {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     object-fit: cover;
     /* Preenche a área mantendo as proporções */
     z-index: -1;
@@ -145,18 +154,23 @@ p {
 }
 
 .iconsrede {
-    width: 45px;
+    width: 55px;
     display: flex;
+}
+
+.iconsrede:hover {
+    width: 65px;
+    transition: width 0.4s;
+    cursor: pointer;
+    
 }
 
 .container-iconsredes {
     display: flex;
+    gap: 150px;
     justify-content: center;
-    /* Centraliza horizontalmente */
-    align-items: center;
-    /* Centraliza verticalmente */
-    justify-content: space-evenly;
-    transform: translate(0%, -50%) translateY(-3vh);
+    transform: translateY(-20vh);
+    z-index: 5;
 }
 
 .h2contato {
@@ -173,28 +187,19 @@ p {
     transform: translate(0%, -50%) translateY(-5vh);
 }
 
-.pcontato-email {
-    font-size: 1.0rem;
-    background-color: rgba(0, 0, 0, 0.582);
-    border-radius: 5px;
-    padding: 8px;
-    margin: 0;
-    position: relative;
-    transform: translate(0%, -50%) translateY(0.3vh);
-    padding-bottom: 0;
-}
 
 .pcontato-venda {
-    font-size: 1.0rem;
     display: flex;
-    justify-content: center;
-    background-color:rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
     padding: 10px;
-    transform: translate(50%, -40%); 
-    width: 500px;
+    justify-content: center;
+    font-size: 1.3rem;
+    background-color: rgba(0, 0, 0, 0.647);
+    border-radius: 5px;
+    width: 50%; 
+    margin: 0 auto; 
     text-align: center;
-    
+    transform: translateY(-10vh);
+    margin-bottom: 17dvh;
 }
 
 
@@ -203,7 +208,7 @@ p {
 main {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
 }
 
 /* Estilo para a div "sobre" */
@@ -219,21 +224,18 @@ main {
     /* Garante que a div fique acima da imagem */
     color: white;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.111);
-    /* Fundo transparente */
-    padding: 20px;
 }
 
 .jornada {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
 }
 
 .imgjornada {
     width: 100%;
     /* Ocupa 100% da largura da tela */
-    height: 100vh;
+    height: 100dvh;
     /* Ocupa 100% da altura da tela */
     object-fit: cover;
     /* Preenche a área mantendo as proporções */
@@ -245,7 +247,7 @@ main {
     position: absolute;
     z-index: 5;
     color: white;
-    top: 5%;
+    top: 13%;
     left: 50%;
     /* Posiciona horizontalmente no centro */
     transform: translate(-50%, -50%);
@@ -259,36 +261,53 @@ main {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     top: 50%;
-    /* Move para a metade da altura da tela */
     left: 50%;
-    /* Move para a metade da largura da tela */
     padding: 15px;
-    width: 80%;
+    width: 40%;
     font-size: 1.1rem;
     border-radius: 2%;
     color: white;
-    transform: translate(-50%, -50%);
-    /* Move o elemento para o centro exato */
+    transform: translate(-5%, -50%);
     z-index: 5;
 }
 
-/* Ajustes no título e parágrafo */
 .sobre h2 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
 }
 
 .sobre p {
     font-size: 1rem;
     line-height: 1.5;
+    width: 80%;
+    transform: translate(10%, 0%);
+    padding: 20px;
+}
+
+footer {
+    position: relative;
+    text-align: center;
+    z-index: 5;
+    transform: translateY(90vh);
+}
+
+.pcontato-email {
+    position: relative;
+    font-size: 1.0rem;
+    background-color: rgba(0, 0, 0, 0.582);
+    border-radius: 5px;
+    padding: 8px;
+    margin: 0;
+    top: 59px;
 }
 
 /* Estilo para o menu */
 .Caixainicial {
-    position: absolute;
+    position: fixed;
+    display: flex;
+    justify-content: center;
     top: 20px;
     left: 20px;
-    z-index: 2;
+    z-index: 6;
 }
 
 ul {
@@ -359,13 +378,10 @@ button:hover {
 }
 
 .container {
-    height: 100vh;
-    /* 100% da altura da tela */
+    height: 100dvh;
     display: flex;
     align-items: center;
-    /* Centraliza verticalmente o conteúdo */
     justify-content: center;
-    /* Centraliza horizontalmente o conteúdo */
 }
 
 
@@ -398,7 +414,7 @@ button:hover {
 
     .imginicio,
     .imagemsobre {
-        height: 100vh;
+        height: 100dvh;
         object-position: 60% center;
     }
 
@@ -466,33 +482,141 @@ button:hover {
         order: 3;
         /* Gráfico abaixo */
     }
+    
+    .imgjornada {
+        height: 100dvh;
+        object-position: 20% center;
+    }
 
-    .pcontato-venda {
-        display: flex;
-        font-size: 1.0rem;
-        padding: 0.5rem 1rem;
-        transform: translate(20%, -50%) translateY(-10vh);
-        height: 100px;
-        width: 300px;
+    .pjornada {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.563);
+        padding: 15px;
+        width: 80%;
+        font-size: 1.1rem;
+        border-radius: 2%;
+        color: white;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+    }
+    
+    .redes-sociais {
+        display: inline-block;
         justify-content: center;
     }
 
-    .redes-sociais {
-        transform: translate(0%, 50%) translateY(-55vh);
-    }
-
     .container-iconsredes {
-       transform: translate(0%, -50%) translateY(27vh);
+        transform: translate(0%, -50%) translateY(-53vh);
+        gap: 60px;
     }
 
     .pcontato-email {
-       transform: translate(0%, -50%) translateY(31vh);
-    }
-    
-    .pcontato {
-        transform: translate(0%, -50%) translateY(25vh);
+       transform: translateY(0);
+       font-size: 0.9rem;
     }
 
+    footer {
+        margin: 0;
+        transform: translateY(85dvh);
+    }
+    
+
+    .pcontato {
+        transform: translateY(-12dvh);
+    }
+
+    .h2contato {
+        font-size: 1.2rem;
+        margin-top: 30px;
+    }
+
+    .pcontato-venda {
+    font-size: 0.9rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 10px;
+    width: 80%; 
+    margin: 0 auto; 
+    text-align: center;
+    top: 0;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .pcontato-venda {
+        display: flex;
+    padding: 10px;
+    justify-content: center;
+    font-size: 1.3rem;
+    background-color: rgba(0, 0, 0, 0.647);
+    border-radius: 5px;
+    width: 50%; 
+    margin: 0 auto; 
+    text-align: center;
+    }
+
+    .pcontato-email {
+    font-size: 1.2rem;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 1024px)  {
+    .Caixainicial ul {
+        padding-left: 10%;
+    }
+
+    .Tituloinicial h1 {
+        font-size: 2.2rem;
+    }
+
+    .Tituloinicial p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1.0rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+    .psobre-mim {
+        font-size: 1.3rem;
+    }
+
+    .Tituloinicial {
+        padding-left: 10%;
+        padding-right: 10%;
+        top: 40%;
+    }
+
+    .imginicio,
+    .imagemsobre {
+        height: 100dvh;
+        object-position: 60% center;
+    }
+
+    .redes-sociais {
+        display: inline-block;
+        justify-content: center;
+        
+    }
+    
+    .pcontato-venda {
+        transform: translate(53%, -50%) translateY(0vh);
+        justify-content: center;
+        height: 410px;
+        justify-content: center;
+        width: 388px;
+        font-size: 1.3rem;
+    }
+    
+    .pcontato-email {
+        transform: translate(0%, 50%) translateY(0vh);
+        justify-content: center;
+        font-size: 1.3rem;
+    }
+    
 }
 
 @media (max-width: 344px) {
@@ -509,15 +633,17 @@ button:hover {
         padding-left: 0;
         gap: 1rem;
     }
-
+    
     .imginicio,
     .imagemsobre {
-        height: 70vh;
+        height: 70dvh;
         object-position: 60% center;
     }
 }
 
+
 @media (min-width: 1024px) {
+    
     .Tituloinicial h1 {
         font-size: 2.5rem;
     }
@@ -538,5 +664,30 @@ button:hover {
         background-color: rgba(0, 0, 0, 0.419);
         padding: 0px;
         width: 40%;
+    }
+    
+    .pcontato-venda {
+        transform: translate(0%, -50%) translateY(0vh);
+        justify-content: center;
+        width: 60%;
+        font-size: 1.2rem;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .pcontato-email {
+        /*transform: translate(0%, -50%) translateY(-0vh);*/
+        justify-content: center;
+        font-size: 0.9rem;
+        margin: 0 auto;
+        height: auto;
+        top: -0px;
+        padding-bottom: 0;
+        
+    }
+
+    .container-iconsredes {
+        /*transform: translateY(-55vh);*/
+        z-index: 5;
     }
 }
