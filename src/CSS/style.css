@@ -174,10 +174,11 @@ p {
 }
 
 .h2contato {
-    position: absolute;
+    display: flex;
+    justify-content: center;
     top: 0%;
-    left: 50%;
-    transform: translate(-50%, -50%) translateY(-35vh);
+    position: relative;
+    transform: translateY(-35vh);
 }
 
 .pcontato {
@@ -198,8 +199,7 @@ p {
     width: 50%; 
     margin: 0 auto; 
     text-align: center;
-    transform: translateY(-10vh);
-    margin-bottom: 17dvh;
+    transform: translateY(-14dvh);
 }
 
 
@@ -522,30 +522,33 @@ button:hover {
     
 
     .pcontato {
-        transform: translateY(-12dvh);
+        /*transform: translateY(-12dvh);*/
+        display: flex;
+        justify-content: center;
+        padding: 20px;
     }
 
     .h2contato {
         font-size: 1.2rem;
-        margin-top: 30px;
+        margin-bottom: 0 auto;
     }
 
     .pcontato-venda {
+    display: flex;
+    justify-content: center;
     font-size: 0.9rem;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.281);
     border-radius: 5px;
     padding: 10px;
     width: 80%; 
-    margin: 0 auto; 
     text-align: center;
-    top: 0;
     }
 
 }
 
 @media (min-width: 1280px) {
     .pcontato-venda {
-        display: flex;
+    display: flex;
     padding: 10px;
     justify-content: center;
     font-size: 1.3rem;
