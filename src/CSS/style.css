@@ -30,6 +30,7 @@ main {
     height: 100dvh;
     margin-top: -1px;
 }
+
 h2, p {
     color: white;
 }
@@ -130,6 +131,7 @@ li a:hover {
 .Tituloinicial h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 5px rgb(114, 114, 114);
 }
 
 .Tituloinicial p {
@@ -298,28 +300,28 @@ button:hover {
 }
 
 .h2jornada {
-    position: absolute;
     z-index: 5;
     color: white;
-    top: 13%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 2rem;
     text-align: center;
+    transform: translate(-50%, -50%);
+    top: 13%;
+    left: 50%;
+    position: absolute;
 }
 
 .pjornada {
-    position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
-    top: 50%;
-    left: 50%;
     padding: 15px;
-    width: 40%;
+    width: 30%;
     font-size: 1.1rem;
     border-radius: 2%;
     color: white;
-    transform: translate(-5%, -50%);
     z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-5%, -50%);
 }
 
 
@@ -549,23 +551,24 @@ footer {
         object-position: 60% center;
     }
 
-    .redes-sociais {
-        display: inline-block;
+    .pjornada {
         justify-content: center;
         
     }
+
+    .redes-sociais {
+        justify-content: center;
+    }
     
     .pcontato-venda {
-        transform: translate(53%, -50%) translateY(0vh);
         justify-content: center;
         height: 410px;
-        justify-content: center;
         width: 388px;
         font-size: 1.3rem;
+
     }
     
     .pcontato-email {
-        transform: translate(0%, 50%) translateY(0vh);
         justify-content: center;
         font-size: 1.3rem;
     }
