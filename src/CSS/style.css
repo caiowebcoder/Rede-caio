@@ -1,4 +1,33 @@
+/*
+
+Seja bem vindo ao meu código professor! antes de iniciar a analise eu gostaria de esclarecer algumas coisas: 
+
+Eu deixei o código do jeito mais organizado e coloquei o motivo de alguns usos de estilos estranhos no código para te poupar tempo pois sei que seu tempo é precioso.
+
+Problemas já detectados em que eu consigo solucionar: 
+1. Sobre a imagem de fundo que está usando a tag img ao invés de backgrund-image é algo que eu vou resolver em breve já que eu não tinha noção de suas diferentes utilidades;
+2. Sobre a nomenclatura das classes, eu já notei que irei ter que dar uma modificada;
+3. Sobre o uso das palavras chave como nav, aside e etc, eu irei rever isso em breve. Aberto a sugestões de onde seria cada lugar; 
+4. Sobre o uso do display flex, eu já estou ciente que se usa no elemento pai;
+5. Sobre a responsividade, eu estou ciente que preciso fazer alguns ajustes;
+6. Sobre o tamanho do texto, já estou ciente que terei que aumentar.
+
+Principais problemas no meu código: 
+1. Uso excessivo do estilização transform: translate (...). No início foi uma boa solução para posicionar os elementos na tela, mas depois só prejudicou pois o elemento ainda ocupa o espaço que eu não desejava e se tornou meio bagunçado no código para mim poder fazer várias copias do site;
+2. margin top com valor negativo: eu não sei como fazer essas páginas ficarem grudadas sem aquele espaço em branco entre elas (mude a cor de fundo para ver e remova o margin);
+3. Uso incorreto do position: recentemente descobri de fato como funciona os position relative e absolute, já notei que usei errado, mas mesmo assim se torna necessário no meu código pois sem ele a página quebra.
+
+Meu principal objetivo de pedir sua ajuda: eu preciso de sugestões no código para me ajuda-lo a deixar o mais otimizado possível sem mudar o layout, mas todo tipo de sugestão é bem vindo. Gostaria de uma ajuda em tirar o transform translate sem mudar o layout do site, para deixa-lo mais facíl de dar suporte ou mudar para um futuro cliente.
+
+Se quiser usar esse código para explicar para seus alunos, fique a vontade!
+
+ps.: Sobre os botões no início da página, eu irei modificar o link para outra coisa como portifólio ou o meu website de vendas (em planejamento...).
+*/
+
+/*Indo para o código:*/
+
 /* Reset de estilos padrões */
+habilidades
 * {
     margin: 0;
     padding: 0;
@@ -8,27 +37,35 @@
 /*Principais configurações*/
 html {
     scroll-behavior: smooth;
+    min-height: 100dvh;
+    /*
+    transition-property: min-height;
+    transition-duration: 1s;*/
 }
 
 body {
     font-family: Arial, sans-serif;
+    font-weight: 7px;
     background-color: rgb(0, 0, 0);
     margin: 0 auto;
     padding: 0;
-    min-height: 100dvh;
-}
+    /*--oi-color: red;
+    color: var(--oi-color);*/
+} 
 
-header {
+.header-inicio {
     position: relative;
     width: 100%;
     height: 100dvh;
-    overflow: hidden;
+    background-image: url(../img/fundo-inicio.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 main {
     position: relative;
     height: 100dvh;
-    margin-top: -1px;
+    margin-top: -1px; /*resolve o espaçamento entre os container*/
 }
 
 h2, p {
@@ -43,12 +80,12 @@ ul {
 
 li a {
     color: white;
+    padding: 0.5rem 1rem;
     text-decoration: none;
     font-size: 1.2rem;
-    padding: 0.5rem 1rem;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease; /*Peguei da IA*/
 }
 
 li a:hover {
@@ -66,16 +103,19 @@ li a:hover {
 }
 
 .sobre {
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-60%, -50%);
-    z-index: 2;
+    background-image: url(../img/fundo-sobre.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100dvh;
+    width: 100%;
     color: white;
     text-align: center;
 }
 
-.container-comigo3 {
+.habilidades {
     display: flex;
     position: relative;
     align-items: center;
@@ -87,11 +127,18 @@ li a:hover {
     min-height: 100dvh;
     margin-top: -4px;
 }
-    
+
 .jornada {
-    position: absolute;
     width: 100%;
     height: 100dvh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/fundo-jornada.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 /*Configuração de botões*/
@@ -161,27 +208,32 @@ button:hover {
     color: black;
 }
 
-.container {
-    height: 100dvh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+
+/*
+p {
+    line-height: 1.2;
+    }
+    */
+    
+.h2__sobre {
+        font-size: 2rem;
+        padding-top: 5rem;
+        padding-bottom: 6rem;
 }
-
-
-.sobre h2 {
-    font-size: 1.5rem;
-}
-
-.sobre p {
+    
+.p__sobre {
     font-size: 1rem;
-    line-height: 1.5;
-    width: 80%;
-    transform: translate(10%, 0%);
-    padding: 20px;
+    line-height: 1.7; 
+    display: inline-block;
+    justify-content: center;
+    width: 40%;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 2%;
 }
 
-.container-comigo3 h2 {
+.habilidades h2 {
     font-size: 2rem;
     text-align: center;
     width: 100%;
@@ -196,13 +248,13 @@ button:hover {
     max-width: 1200px;
 }
 
-.container-comigo3 .graficoskill {
+.habilidades .graficoskill {
     width: 30%;
     z-index: 2;
     margin-left: 6%;
 }
 
-.container-comigo3 p {
+.habilidades p {
     width: 100%;
     font-size: 1rem;
     text-align: justify;
@@ -216,66 +268,49 @@ button:hover {
 
 
 .container-contato {
-    position: relative;
-    height: 100dvh;
-    top: 100%;
-    z-index: -1;
-    overflow: hidden; 
-    margin-top: -1px;
+    min-height: 100dvh;
+    background-image: url(../img/comigo5.jpg);
+    background-size: cover;
+    background-position: center;
+    /*overflow: hidden;*/
+
 }
 
 .redes-sociais {
-    position: relative;
-    z-index: 2;
     text-align: center;
-    bottom: 0%;
-    transform: translate(0%, -50%) translateY(-50vh);
-    height: 0;
     width: 100%;
 }
-
-.imgcontato {
-    width: 100%;
-    height: 100dvh;
-    object-fit: cover;
-    z-index: -1;
-    
-}
-
 
 .iconsrede {
-    width: 55px;
+    width: 4rem;
     display: flex;
+    transition-duration: 0.4s;
+    border-radius: 50%;
+    transition: .5s linear;
+    transition-delay: .1s;
 }
 
 .iconsrede:hover {
-    width: 65px;
-    transition: width 0.4s;
-    cursor: pointer;
-    
+    outline: .5rem solid rgba(255, 255, 255, 0.151);
+    scale: 1.12;
 }
 
 .container-iconsredes {
     display: flex;
     gap: 150px;
     justify-content: center;
-    transform: translateY(-20vh);
-    z-index: 5;
 }
 
 .h2contato {
     display: flex;
     justify-content: center;
-    top: 0%;
-    position: relative;
-    transform: translateY(-35vh);
+    padding: 6rem 0 7rem;
 }
 
 .pcontato {
     font-size: 1.1rem;
     border-radius: 5px;
     padding: 10px;
-    transform: translate(0%, -50%) translateY(-5vh);
 }
 
 
@@ -291,23 +326,10 @@ button:hover {
     text-align: center;
 }
 
-.imgjornada {
-    width: 100%;
-    height: 100dvh;
-    object-fit: cover;
-    position: relative;
-    z-index: 4;
-}
-
 .h2jornada {
-    z-index: 5;
     color: white;
     font-size: 2rem;
     text-align: center;
-    transform: translate(-50%, -50%);
-    top: 13%;
-    left: 50%;
-    position: absolute;
 }
 
 .pjornada {
@@ -315,38 +337,31 @@ button:hover {
     padding: 15px;
     width: 30%;
     font-size: 1.1rem;
+    text-align: center;
     border-radius: 2%;
     color: white;
-    z-index: 5;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-5%, -50%);
 }
 
 
 footer {
-    position: relative;
     text-align: center;
-    z-index: 5;
-    transform: translateY(90vh);
 }
 
 .pcontato-email {
-    position: relative;
     font-size: 1.0rem;
-    background-color: rgba(0, 0, 0, 0.582);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
-    padding: 8px;
+    padding: .5rem;
     margin: 0;
-    top: 59px;
 }
 
 
 
 
 
-/* Estilo responsivo para diferentes tamanhos de tela */
+/* Estilo responsivo para diferentes tamanhos de tela
+obs: eu não cheguei a essa parte de seu curso, eu aprendi só praticando mesmo... mas mesmo assim vou me aprofundar nisso.
+*/
 @media (max-width: 768px) {
     .Caixainicial ul {
         padding-left: 15%;
@@ -371,22 +386,15 @@ footer {
         top: 40%;
     }
 
-    .imginicio,
-    .imagemsobre {
-        height: 100dvh;
-        object-position: 60% center;
+    .header-inicio {
+        background-position: 60% center;
     }
 
-    .sobre {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, 0.419);
-        padding: 0px;
+    .p__sobre {
         width: 80%;
     }
 
-    .container-comigo3 {
+    .habilidades {
         flex-direction: column;
     }
 
@@ -394,43 +402,39 @@ footer {
         flex-direction: column;
     }
 
-    .container-comigo3 .graficoskill,
-    .container-comigo3 p {
+    .habilidades .graficoskill,
+    .habilidades p {
         width: 100%;
         margin-bottom: 20px;
     }
 
-    .container-comigo3 h2 {
+    .habilidades h2 {
         font-size: 1.5rem;
         margin-top: 8%;
         margin-bottom: 5%;
     }
 
-    .container-comigo3 .graficoskill {
+    .habilidades .graficoskill {
         width: 77%;
     }
 
-    /*Alguém realmente está lendo isso?*/
-    .container-comigo3 p {
+    .habilidades p {
         font-size: 1rem;
         background-color: rgba(0, 0, 0, 0.574);
         width: 90%;
         margin-left: 5%;
     }
 
-    .container {
-        flex-direction: column;
-    }
 
-    .container-comigo3 H2 {
+    .habilidades H2 {
         order: 1;
     }
 
-    .container-comigo3 P {
+    .habilidades P {
         order: 2;
     }
 
-    .container-comigo3 .graficoskill {
+    .habilidades .graficoskill {
         order: 3;
     }
     
@@ -439,16 +443,17 @@ footer {
         object-position: 20% center;
     }
 
+    .jornada {
+        background-position: 27% center;
+    }
+
     .pjornada {
-        position: absolute;
         background-color: rgba(0, 0, 0, 0.563);
         padding: 15px;
         width: 80%;
-        font-size: 1.1rem;
+        font-size: 1rem;
         border-radius: 2%;
         color: white;
-        transform: translate(-50%, -50%);
-        z-index: 5;
     }
     
     .redes-sociais {
@@ -457,43 +462,40 @@ footer {
     }
 
     .container-iconsredes {
-        transform: translate(0%, -50%) translateY(-53vh);
-        gap: 60px;
+        gap: 3rem;
+        padding-bottom: 3rem;
     }
 
     .pcontato-email {
-       transform: translateY(0);
        font-size: 0.9rem;
     }
 
     footer {
         margin: 0;
-        transform: translateY(85dvh);
     }
     
+    
+    .h2contato {
+        font-size: 1.2rem;
+        padding: 16rem 0 2rem;
+    }
 
     .pcontato {
         display: flex;
         justify-content: center;
         padding: 20px;
-    }
-
-    .h2contato {
-        font-size: 1.2rem;
-        top: 60px;
+        margin-top: 3rem;
     }
 
     .pcontato-venda {
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 1rem;
     background-color: rgba(0, 0, 0, 0.281);
     border-radius: 5px;
     padding: 10px;
     width: 80%; 
     text-align: center;
-    margin-top: -130px;
-    margin-bottom: 90px;
     }
 
 }
@@ -535,7 +537,7 @@ footer {
         padding: 0.6rem 1.5rem;
     }
 
-    .psobre-mim {
+    .p__sobre {
         font-size: 1.3rem;
     }
 
@@ -545,16 +547,6 @@ footer {
         top: 40%;
     }
 
-    .imginicio,
-    .imagemsobre {
-        height: 100dvh;
-        object-position: 60% center;
-    }
-
-    .pjornada {
-        justify-content: center;
-        
-    }
 
     .redes-sociais {
         justify-content: center;
@@ -577,7 +569,8 @@ footer {
 
 @media (max-width: 344px) {
 
-    /* Ajuste para telas menores, como Z Fold 5 */
+    /* Ajuste para telas menores, como Z Fold 5
+    obs: Em desenvolvimento. */
     .Caixainicial {
         display: flex;
         justify-content: center;
@@ -590,11 +583,7 @@ footer {
         gap: 1rem;
     }
     
-    .imginicio,
-    .imagemsobre {
-        height: 70dvh;
-        object-position: 60% center;
-    }
+  
 }
 
 
@@ -614,39 +603,30 @@ footer {
     }
 
     .sobre {
-        top: 50%;
-        left: 35%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, 0.419);
         padding: 0px;
-        width: 40%;
+        width: 100%;
     }
 
     .h2contato {
-        font-size: 1.5rem;
+        font-size: 1.9rem;
         top: 30px;
     }
 
     .pcontato {
         display: flex;
         justify-content: center;
+        font-size: 1.5rem; /*Ainda não vi essa propriedade em seu curso, mas já sei o básico de como funciona.*/
         margin-top: 100px;
     }
     
     .pcontato-venda {
-        /*transform: translate(0%, -50%) translateY(0vh);*/
         display: flex;
         justify-content: center;
-        margin-top: -90px;
         width: 50%;
         font-size: 1.1rem;
         height: auto;
     }
 
-    .container-iconsredes {
-        /*transform: translateY(-55vh);*/
-        z-index: 2;
-    }
 
     .pcontato-email {
         /*transform: translate(0%, -50%) translateY(-0vh);*/
@@ -654,7 +634,6 @@ footer {
         font-size: 0.9rem;
         margin: 0 auto;
         height: auto;
-        top: 28px;
         padding-bottom: 0;
         
     }
