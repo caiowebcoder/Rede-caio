@@ -5,42 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rede-caio</title>
+    <link rel="website icon" type="png" href="../img/logo.jpg">
     <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="website icon" type="png" href="../img/logo.jpg.jpg">
+    <link rel="stylesheet" href="../CSS/fonts.css">
 </head>
 
 <body>
     <header class="header-inicio">
-        <div class="Caixainicial">
+        <nav class="Caixainicial">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#rolagemsobre">Sobre</a></li>
                 <li><a href="#rolagemcontato">Contato</a></li>
             </ul>
-        </div>
+        </nav>
         <div class="Tituloinicial">
             <h1>Caio marques menegasso</h1>
             <p>Design e desenvolvimento web</p>
             <div class="btn-container">
-                <a href="#rolagemsobre"><button>Sobre mim</button></a>
-                <a href="#rolagemcontato"><button>Contato</button></a>
+                <a class="btn-inicio" href="#rolagemsobre">Sobre mim</a>
+                <a class="btn-inicio" href="#rolagemcontato">Contato</a>
             </div>
         </div>
-        <!--<img class="imginicio" src="../img/fundo-inicio.jpg" alt="imagem de fundo">-->
     </header>
 
     <main>
-        <div id="rolagemsobre"></div>
-        <div class="sobre">
+        <section class="sobre" id="rolagemsobre">
             <h2 class="h2__sobre">Sobre mim</h2>
-            <p class="p__sobre">
+            <p class="p__sobre" id="p__sobre">
                 Olá! Sou o Caio, um jovem com sede de conhecimento e sempre buscando crescer. Sou apaixonado por
                 programação e tenho um grande interesse em finanças, áreas que acredito serem essenciais para alcançar
                 meus sonhos. Tento levar a vida com disciplina e foco, sempre buscando aprender e evoluir. Neste site,
                 compartilho um pouco sobre meu trabalho e minhas metas. Fique à vontade para explorar e, se quiser, me
                 mande uma mensagem para trocarmos ideias!</p>
-        </div>
-        <div class="habilidades">
+        </section>
+        <section class="habilidades">
             <img class="graficoskill" src="../img/grafico.jpg" alt="grafico de habilidades">
             <h2>Habilidades</h2>
             <p>Meu conhecimento em desenvolvimento web abrange HTML, além de CSS e JavaScript, que ainda estou
@@ -49,17 +48,17 @@
                 financeira estável. Minha rotina disciplinada, com alimentação saudável e exercícios, sustenta meu
                 desempenho e foco, garantindo que estou preparado para evoluir continuamente e enfrentar novos desafios.
             </p>
-        </div>
-        <div class="jornada">
+        </section>
+        <section class="jornada">
             <h2 class="h2jornada">Jornada</h2>
             <p class="pjornada">Minha trajetória é marcada pela disciplina e organização, qualidades que aplico aos
                 estudos, investimentos e objetivos de vida. Com um portfólio financeiro diversificado e habilidades em
                 programação, busco construir uma carreira sólida e alcançar a independência financeira. Atualmente,
                 estou desenvolvendo um site minimalista para me apresentar profissionalmente e abrir portas para novas
                 oportunidades, sempre com o foco em, no futuro, liderar meu próprio negócio.</p>
-        </div>
+        </section>
 
-        <div class="container-contato">
+        <section class="container-contato" id="rolagemcontato">
             <div class="redes-sociais">
                 <h2 class="h2contato">Quer um site que fale por você?</h2>
                 <p class="pcontato-venda">Este modelo de site foi desenvolvido para ser simples, direto e eficaz,
@@ -70,7 +69,7 @@
                     atender suas necessidades e reforçar sua presença online!</p>
                     <p class="pcontato">Onde Me Encontrar:</p>
                 </div>
-                <div id="rolagemcontato"></div>
+                
             <div class="container-iconsredes"><a href="https://wa.me/qr/DPX7ZROWP66XD1" target="_blank"
                     rel="noopener noreferrer"><img class="iconsrede" src="../img/icons/zap.png" alt="whatsapp"></a>
                 <a href="https://www.instagram.com/potencialdesbloqueado/profilecard/?igsh=M3M5bTA0eHVyemNm"
@@ -79,10 +78,9 @@
                 <a href="https://github.com/Errorpro1" target="_blank" rel="noopener noreferrer"><img class="iconsrede"
                         src="../img/icons/github.png" alt="github"></a>
             </div>
-        </div>
-        </div>
+        </section>
         <footer>
-            <p class="pcontato-email">Para mais informações, entre em contato: <br> contact.caiodev@gmail.com</p>
+            <address class="contato-email">Para mais informações, entre em contato: <br> contact.caiodev@gmail.com </address>
         </footer>
     </main>
 
