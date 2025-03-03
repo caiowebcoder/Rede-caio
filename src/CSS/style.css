@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 :root {
-    --paragrafo-size: : 1.5em;
+    --title-1-size: 2rem;
+    --paragrafo-size: clamp(.7rem, calc(5vw + 1rem), 1rem);
+    --text-color: rgb(246, 246, 246);
 }
 
 * {
@@ -11,19 +15,17 @@
 /*Principais configurações*/
 html {
     scroll-behavior: smooth;
-    min-height: 100dvh;
 }
 
 body {
     font-family: Arial, sans-serif;
-    font-weight: 7px;
+    min-height: 100dvh;
     background-color: rgb(0, 0, 0);
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
-    color: rgb(255, 255, 255);
-    font-size: var(--paragrafo-size);
-    /*--oi-color: red;
-    color: var(--oi-color);*/
+    color: var(--text-color);
+    font-family: "Quicksand", sans-serif;
+    font-style: normal;
 } 
 
 .header-inicio {
@@ -83,6 +85,7 @@ li a:hover {
     width: 100%;
     color: white;
     text-align: center;
+    font-size: var(--paragrafo-size);
 }
 
 .habilidades {
@@ -99,8 +102,7 @@ li a:hover {
 
 .jornada {
     width: 100%;
-    height: 100dvh;
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,6 +116,9 @@ li a:hover {
     background-image: url("../img/background/fundo-contato.jpg");
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*Configuração de botões*/
@@ -162,7 +167,7 @@ li a:hover {
 
 .btn-inicio {
     padding: 0.8rem 2rem;
-    font-size: 1rem;
+    font-size: var(--paragrafo-size);
     text-decoration: none;
     border: none;
     border-radius: 50px;
@@ -179,22 +184,17 @@ li a:hover {
 }
     
 .h2__sobre {
-        font-size: 2rem;
-        padding-top: 5rem;
-        padding-bottom: 6rem;
+    font-size: 2rem;
+    margin: 5rem auto;
 }
     
 .p__sobre {
-    justify-content: center;
-    align-self: center; /*salvação*/
+    font-size: var(--paragrafo-size);
+    margin: 4rem auto;
     width: 40%;
-    padding: 2rem;
+    padding: min(2rem, 8%);
     background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 2%;
-}
-
-#p__sobre {
-    align-self: center;
+    border-radius: .5rem;
 }
 
 .habilidades h2 {
@@ -202,7 +202,7 @@ li a:hover {
     text-align: center;
     width: 100%;
     margin-bottom: 30%;
-
+    
 }
 
 .container-grafico-paragrafo {
@@ -227,62 +227,11 @@ li a:hover {
     margin-right: 6%;
 }
 
-
-
-
-.redes-sociais {
-    text-align: center;
-    width: 100%;
-}
-
-.iconsrede {
-    width: 4rem;
-    display: flex;
-    transition-duration: 0.4s;
-    border-radius: 50%;
-    transition: .5s linear;
-    transition-delay: .1s;
-}
-
-.iconsrede:hover {
-    outline: .5rem solid rgba(255, 255, 255, 0.151);
-    scale: 1.12;
-}
-
-.container-iconsredes {
-    display: flex;
-    gap: 150px;
-    justify-content: center;
-}
-
-.h2contato {
-    display: flex;
-    justify-content: center;
-    padding: 6rem 0 7rem;
-}
-
-.pcontato {
-    border-radius: 5px;
-    padding: 10px;
-}
-
-
-.pcontato-venda {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.647);
-    border-radius: 5px;
-    width: 50%; 
-    margin: 0 auto; 
-    text-align: center;
-}
-
 .h2jornada {
     color: white;
     font-size: 2rem;
     text-align: center;
-    padding: 5rem 0 7rem;
+    margin: 5rem 0 7rem;
 }
 
 .pjornada {
@@ -292,37 +241,143 @@ li a:hover {
     text-align: center;
     border-radius: 2%;
     color: white;
+    margin: 3rem;
 }
 
+.h2contato {
+    margin: 8rem;
+}
 
+.pcontato {
+    border-radius: 5px;
+    margin: 5rem;
+    font-size: 1.3rem;
+}
+
+.pcontato-venda {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.647);
+    border-radius: 5px;
+    width: 50%; 
+    margin: 7rem auto 0; 
+    text-align: center;
+}
+
+.redes-sociais {
+    text-align: center;
+    width: 100%;
+}
+
+.iconsrede {
+    width: 3rem;
+    transition-duration: 0.4s;
+    border-radius: 50%;
+    transition: .5s linear;
+    transition-delay: .1s;
+}
+
+.iconsrede:hover {
+    scale: 1.12;
+}
+
+.container-iconsredes {
+    display: flex;
+    gap: 9.3rem;
+    justify-content: center;
+}
 footer {
     text-align: center;
 }
 
 .contato-email {
-    font-size: 1.0rem;
+    font-size: var(--paragrafo-size);
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
+    border-radius: .4rem;
     padding: .5rem;
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
-@media (max-width: 768px) {
-    body {
-        color: white;
-    }
-
+/*tablet*/
+@media (min-width: 451px) and (max-width: 1020px)  {
     .Caixainicial ul {
-        padding-left: 1rem;
+        padding-left: 10%;
     }
 
     .Tituloinicial h1 {
-        font-size: 2rem;
+        font-size: var(--title-1-size);
     }
 
-    .Tituloinicial p {
-        font-size: 1rem;
+    .btn-inicio {
+        font-size: 1.0rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+    .h2__sobre {
+        padding: 0;
+        margin: 8rem;
+    }
+
+    .p__sobre {
+        width: 70%;
+        margin: 10rem;
+    }
+
+    .Tituloinicial {
+        margin: 8rem;
+    }
+
+    .habilidades {
+        flex-direction: column;
+        justify-content: start;
+        gap: 1rem;
+    }
+    
+    .habilidades h2{
+        margin: 8rem 0;
+    }
+
+    .habilidades p {
+        order: 1;
+        width: 60%;
+        margin: 0;
+    }
+    
+    .graficoskill {
+        width: 40%;
+        margin: 0 auto;
+        order: 1;
+    }
+    
+    .h2jornada {
+        margin: 8rem 0;
+        
+    }
+    
+    .pjornada {
+        width: 60%;
+        margin: 10rem 0;
+    }
+
+    .h2contato {
+        margin: 10rem 0;
+    }
+
+    .pcontato-venda {
+        margin: 0rem auto;
+    }
+    
+    .pcontato {
+        margin: 3rem;
+    }
+    
+    .iconsrede {
+        width: 5rem;
+    }
+}
+/*Celular*/
+@media (min-width: 200px) and (max-width: 450px) {
+    .Caixainicial ul {
+        padding-left: 1rem;
     }
 
     .btn-inicio {
@@ -354,11 +409,9 @@ footer {
     .habilidades .graficoskill,
     .habilidades p {
         width: 100%;
-        margin-bottom: 20px;
     }
 
     .habilidades h2 {
-        font-size: 1.5rem;
         margin-top: 8%;
         margin-bottom: 5%;
     }
@@ -368,7 +421,6 @@ footer {
     }
 
     .habilidades p {
-        font-size: 1rem;
         background-color: rgba(0, 0, 0, 0.574);
         width: 90%;
         margin-left: 5%;
@@ -400,7 +452,6 @@ footer {
         background-color: rgba(0, 0, 0, 0.563);
         padding: 15px;
         width: 80%;
-        font-size: 1rem;
         border-radius: 2%;
         color: white;
     }
@@ -411,7 +462,6 @@ footer {
     }
 
     .container-iconsredes {
-        gap: 3rem;
         padding-bottom: 3rem;
     }
 
@@ -426,196 +476,64 @@ footer {
     
     .h2contato {
         font-size: 1.2rem;
-        padding: 8rem 0 2rem;
+        margin: 5rem 3rem;
     }
 
     .pcontato {
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-        margin-top: 3rem;
+        margin: 1rem auto;
     }
 
     .pcontato-venda {
-    display: flex;
-    justify-content: center;
-    font-size: 1rem;
-    background-color: rgba(0, 0, 0, 0.281);
-    border-radius: 5px;
-    padding: 10px;
-    width: 80%; 
-    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    }
+
+    .container-iconsredes {
+        gap: 3rem;
     }
 
 }
 
-@media (min-width: 1280px) {
-    .pcontato-venda {
-    display: flex;
-    padding: 10px;
-    justify-content: center;
-    font-size: 1.3rem;
-    background-color: rgba(0, 0, 0, 0.647);
-    border-radius: 5px;
-    width: 50%; 
-    margin: 0 auto; 
-    text-align: center;
-    }
-
-    .contato-email {
-    font-size: 1.2rem;
-    }
-
-}
-
-@media (min-width: 600px) and (max-width: 1020px)  {
-    .Caixainicial ul {
-        padding-left: 10%;
-    }
-
-    .Tituloinicial h1 {
-        font-size: 2.2rem;
-    }
-
-    .Tituloinicial p {
-        font-size: 1rem;
-    }
-
-    .btn-inicio {
-        font-size: 1.0rem;
-        padding: 0.6rem 1.5rem;
-    }
-
-    .h2__sobre {
-        padding-bottom: 0;
-    }
-
-    .p__sobre {
-        width: 78%;
-        margin: auto 0;
-        align-self: center;
-    }
-
-    .Tituloinicial {
-        margin: 8rem;
-    }
-
-    .habilidades {
-        flex-direction: column;
-        justify-content: start;
-    }
-    
-    .habilidades h2{
-        margin: 0;
-        padding: 6rem 0 0rem 0;
-    }
-
-    .habilidades p {
-        order: 1;
-        width: 50%;
-        margin: 0;
-    }
-
-    .graficoskill {
-        width: 40%;
-        margin: 2rem auto;
-        order: 1;
-    }
-
-    .pjornada {
-        width: 70%;
-    }
-
-    .h2contato {
-        font-size: 1.6rem;
-        padding: 8rem 0 5rem 0;
-    }
-
-    .pcontato {
-        font-size: 1.3rem;
-        margin-top: 0;
-    }
 
 
-    .redes-sociais {
-        justify-content: center;
-    }
-    
-    .pcontato-venda {
-        justify-content: center;
-    }
-    
-    .contato-email {
-        justify-content: center;
-    }
-    
-}
 
-@media (max-width: 344px) {
-    .Caixainicial {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .Caixainicial ul {
-        justify-content: center;
-        padding-left: 0;
-        gap: 1rem;
-    }
-    
-  
-}
-
-
-@media (min-width: 1024px) {
+@media (min-width: 2000px) and (min-height: 800px) {
     
     .Tituloinicial h1 {
         font-size: 2.5rem;
     }
-
+    
     .Tituloinicial p {
         font-size: 1.5rem;
     }
 
     .btn-inicio {
-        font-size: 1rem;
         padding: 1rem 1.5rem;
     }
 
-    .sobre {
-        padding: 0px;
-        width: 100%;
+    .h2__sobre {
+        margin: 4rem;
+    }
+    
+    .p__sobre {
+        width: 50%;
+        margin: 6rem 0;
     }
 
+    .h2jornada {
+        margin: 5rem;
+    }
+    
     .h2contato {
-        font-size: 1.9rem;
-        top: 30px;
-    }
-
-    .pcontato {
-        display: flex;
-        justify-content: center;
-        font-size: 1.5rem; 
-        margin-top: 2rem;
+        margin: 9rem 0;
     }
     
     .pcontato-venda {
-        display: flex;
-        justify-content: center;
-        width: 50%;
-        font-size: 1.1rem;
-        height: auto;
+    width: 50%; 
+    margin: 6rem auto;
     }
-
 
     .contato-email {
-        justify-content: center;
-        font-size: 0.9rem;
-        margin: 0 auto;
-        height: auto;
-        padding-bottom: 0;
-        
+    font-size: 1.2rem;
     }
-
 }
