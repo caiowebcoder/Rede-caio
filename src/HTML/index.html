@@ -14,7 +14,11 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body onload="loading()">
+    <div class="box-load">
+        <div class="pre"></div>
+    </div>
+    <div class="content">
     <header class="header-inicio all-container">
         <nav class="Caixainicial">
             <ul>
@@ -81,7 +85,7 @@
                 <a href="https://www.instagram.com/potencialdesbloqueado/profilecard/?igsh=M3M5bTA0eHVyemNm"
                     target="_blank" rel="noopener noreferrer">
                     <img class="iconsrede" src="../img/icons/insta.png"
-                        alt="instagram"></a>
+                    alt="instagram"></a>
                 <a href="https://github.com/Errorpro1" target="_blank" rel="noopener noreferrer">
                     <img class="iconsrede" src="../img/icons/github.png" alt="github">
                     </a>
@@ -91,7 +95,7 @@
             <address class="contato-email">Para mais informações, entre em contato: <br> contact.caiodev@gmail.com </address>
         </footer>
     </main>
-
+</div>
     <!--
         ignore:
         Colocando &copy vai aparecer um símbulo de direitos no texto, teste!
@@ -99,5 +103,11 @@
         Se vocÊ escrever {new Date().getFullYear()} no svelte, vai aparecer a data do ano atualizada pelo js sem precisar alterar no futuro
         -->
 </body>
+        <script>
+            function loading(){
+                document.getElementsByClassName("box-load")[0].style.display = "none";
+                document.getElementsByClassName("content")[0].style.display = "block";
+            }
+        </script>
 
 </html>
