@@ -18,12 +18,12 @@ html {
 }
 
 body {
-    min-height: 100dvh;
-    background-color: rgb(0, 0, 0);
-    margin: 0;
-    padding: 0;
-    color: var(--text-color);
-    font-family: "Quicksand", arial, sans-serif;
+  min-height: 100dvh;
+  background-color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  font-family: "Quicksand", arial, sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -69,6 +69,7 @@ li a:hover {
 .all-container {
     padding-top: 1px;
 }
+
 .imginicio,
 .imagemsobre {
     width: 100%;
@@ -88,7 +89,6 @@ li a:hover {
     width: 100%;
     color: white;
     text-align: center;
-    font-size: var(--paragrafo-size);
 }
 
 .alem-de {
@@ -389,7 +389,6 @@ footer {
     color: white;
 }
 
-
 /*tablet*/
 @media (min-width: 451px) and (max-width: 1020px)  {
     .Caixainicial ul {
@@ -557,6 +556,7 @@ footer {
     gap: 3rem;
 }
 
+
 }
 /*celular com tela 9.16 pequena*/
 @media (max-width: 328px) and (max-height: 608px) {
@@ -626,5 +626,21 @@ footer {
 
     .contato-email {
     font-size: 1.2rem;
+    }
+}
+@media (max-width: 768px) {
+    .Caixainicial {
+        display: flex;
+        justify-content: end;
+        background-color: rgba(0, 0, 0, 0.401);
+        width: 100%;
+    }
+
+    .ul-link {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+        margin: 0 1rem;
     }
 }
